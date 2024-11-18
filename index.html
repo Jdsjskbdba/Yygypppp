@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجمع الزهراء الطبي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+        }
+        header img {
+            max-width: 100px;
+        }
+        .services, .doctors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .service, .doctor {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .service img, .doctor img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .appointment-form {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+        }
+        .appointment-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .appointment-form input, .appointment-form select, .appointment-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .appointment-form button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .appointment-form button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مجمع الزهراء الطبي</h1>
+        <img src="dentistry.png" alt="مجمع الزهراء الطبي">
+    </header>
+
+    <section>
+        <h2>خدماتنا</h2>
+        <div class="services">
+            <div class="service">
+                <img src="dentist.gif" alt="الحشوات">
+                <h3>الحشوات الضوئية والمعدنية</h3>
+            </div>
+            <div class="service">
+                <img src="dental-care.gif" alt="التنظيف">
+                <h3>جلسات التنظيف وإزالة التكلسات</h3>
+            </div>
+            <div class="service">
+                <img src="caries.gif" alt="قلع الأسنان">
+                <h3>جلسات قلع الأسنان والجذور التالفة</h3>
+            </div>
+            <div class="service">
+                <img src="dental-implant.gif" alt="زراعة الأسنان">
+                <h3>زراعة الأسنان</h3>
+            </div>
+            <div class="service">
+                <img src="denture.gif" alt="طقم الأسنان">
+                <h3>طقم ثابت ومتحرك</h3>
+            </div>
+            <div class="service">
+                <img src="smile.gif" alt="تقويم الأسنان">
+                <h3>تقويم الأسنان</h3>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>الأطباء المتوفرون</h2>
+        <div class="doctors">
+            <div class="doctor">
+                <img src="Kskst.jpg" alt="د. علي ثابت الحسيني">
+                <h3>د. علي ثابت الحسيني</h3>
+            </div>
+            <div class="doctor">
+                <img src="Kskst.jpg" alt="د. محمد علي الموسوي">
+                <h3>د. محمد علي الموسوي</h3>
+            </div>
+            <div class="doctor">
+                <img src="Mskshxb.jpg" alt="د. محمد عبدالله الأسدي">
+                <h3>د. محمد عبدالله الأسدي</h3>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>حجز موعد</h2>
+        <form class="appointment-form" action="https://formspree.io/f/xovqlqry" method="POST">
+            <label for="name">الاسم</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">العمر</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">الجنس</label>
+            <select id="gender" name="gender" required>
+                <option value="ذكر">ذكر</option>
+                <option value="أنثى">أنثى</option>
+            </select>
+
+            <label for="doctor">اختيار الدكتور</label>
+            <select id="doctor" name="doctor" required>
+                <option value="د. علي ثابت الحسيني">د. علي ثابت الحسيني</option>
+                <option value="د. محمد علي الموسوي">د. محمد علي الموسوي</option>
+                <option value="د. محمد عبدالله الأسدي">د. محمد عبدالله الأسدي</option>
+            </select>
+
+            <label for="date">التاريخ</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">الوقت</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="description">وصف الحالة</label>
+            <textarea id="description" name="description" rows="5" required></textarea>
+
+            <button type="submit">إرسال الحجز</button>
+        </form>
+    </section>
+</body>
+</html>
